@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meat Health</title>
+</head>
+<body>
+    <h1>Simule aqui sua economia com o ECC1</h1>
+    Quantidade Armazenada De Carne em KG <input type="number" id="qtdarmazenada"><br>
+    Quantidade Perdida De Carne em KG    <input type="number" id="qtdperdida"><br>
+    Valor da Carne por KG                <input type="number" id="valordacarne"><br>
+    <button onclick="calcularlucro()">Calcular lucro com o ECC1</button>
+    <div id = "lucroecc1"></div>
+</body>
+</html>
+
+<script>
+    function calcularlucro() {
+    var quantidadearmazenada = qtdarmazenada.value;
+    var qtdperdidadecarne = qtdperdida.value;
+    var valorcarne = valordacarne.value;
+    var prejuizodecarne = Number(qtdperdidadecarne) * Number(valorcarne);
+    var lucrocproduto = quantidadearmazenada * valorcarne
+
+    lucroecc1.innerHTML = `Você está perdendo ${qtdperdidadecarne} KG de carne do seu estoque equivalente a R$${prejuizodecarne} reais
+                           e com o nosso produto irá lucrar R$${lucrocproduto} reais com nosso produto ECC1`
+    }
+</script>
